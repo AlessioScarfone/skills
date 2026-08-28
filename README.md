@@ -1,0 +1,9 @@
+# Alessio's Skills
+
+Skills for AI-assisted
+
+ Skill | Description |
+|-------|-------------|
+| `create-agents-md` | Generate an AGENTS.md file for a repository |
+| `create-ux-prototype` | Facilitate UX design sessions with structured brainstorming, design decision workshops, UX specification writing, and standalone HTML/CSS prototyping |
+| `skill-creator` | Authors and structures professional-grade agent skills following the agentskills.io spec. Use when creating new skill directories, drafting procedural instructions, or optimizing metadata for discoverability. Don't use for general documentation, non-agentic library code, or README files. |
