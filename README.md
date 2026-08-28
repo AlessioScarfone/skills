@@ -1,6 +1,9 @@
-# Alessio's Skills
+# Agent Skills
 
-Skills for AI-assisted
+Skills for AI-assisted - [Agent Skills Documentation](https://agentskills.io)
+
+
+## Available Skills
 
  Skill | Description |
 |-------|-------------|
