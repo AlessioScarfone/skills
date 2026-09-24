@@ -7,6 +7,7 @@ Skills for AI-assisted - [Agent Skills Documentation](https://agentskills.io)
 
  Skill | Description |
 |-------|-------------|
+| `code-review` | Reviews local changes or diffs for bugs, security vulnerabilities, and code quality issues, reporting only verified, high-impact findings with confidence scoring. |
 | `create-agents-md` | Generate an AGENTS.md file for a repository |
 | `create-ux-prototype` | Facilitate UX design sessions with structured brainstorming, design decision workshops, UX specification writing, and standalone HTML/CSS prototyping |
 | `skill-creator` | Authors and structures professional-grade agent skills following the agentskills.io spec. Use when creating new skill directories, drafting procedural instructions, or optimizing metadata for discoverability. Don't use for general documentation, non-agentic library code, or README files. |
