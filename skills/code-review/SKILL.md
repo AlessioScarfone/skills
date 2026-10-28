@@ -1,6 +1,7 @@
 ---
 name: code-review
 description: Reviews local changes, a specified diff, or a GitHub/GitLab pull/merge request for bugs, logic errors, security vulnerabilities, code quality issues, and project-convention violations, using confidence-based filtering to report only verified, high-impact issues. Use when the user asks to review code, check a diff, branch, PR or MR, audit recent changes, or sanity-check work before pushing. Do not use for implementing features, writing tests, refactoring, or applying fixes.
+argument-hint: Provide a diff, a list of changed files, or a PR/MR URL to review.
 ---
 
 # Code Review
