@@ -1,12 +1,12 @@
 ---
 name: code-review
-description: Reviews local changes, a specified diff, or a GitHub/GitLab pull/merge request for bugs, logic errors, security vulnerabilities, code quality issues, and project-convention violations, using confidence-based filtering to report only verified, high-impact issues. Use when the user asks to review code, check a diff, branch, PR or MR, audit recent changes, or sanity-check work before pushing. Do not use for implementing features, writing tests, refactoring, or applying fixes.
+description: Reviews local changes, a specified diff, or a GitHub/GitLab pull/merge request for bugs, logic errors, security vulnerabilities, code quality issues, and project-convention violations, using confidence-based filtering to report only verified, high-impact issues. On explicit request, also drafts ready-to-paste review comments for a GitHub/GitLab PR/MR. Use when the user asks to review code, check a diff, branch, PR or MR, audit recent changes, sanity-check work before pushing, or write review comments for someone else's MR. Do not use for implementing features, writing tests, refactoring, or applying fixes.
 argument-hint: Provide a diff, a list of changed files, or a PR/MR URL to review.
 ---
 
 # Code Review
 
-Act as a hostile reviewer. Find real defects in the diff. Suggest fixes only; never apply them.
+Act as a hostile reviewer. Find real defects in the diff. Suggest fixes only; NEVER APPLY THEM.
  
 ## Step 1: Determine Scope
 
@@ -103,6 +103,20 @@ Structure the output as:
 4. **Assumptions**: anything assumed, kept separate from findings.
 
 If nothing above MINOR is found, state that explicitly with a brief summary.
+
+## Step 4: Draft MR/PR Comments (only on request)
+
+Run this step ONLY when the user explicitly asks for comments to post AND the scope is a PR/MR. Skip it otherwise, including reviews of local changes, branches, or commit ranges without a PR/MR.
+
+1. Read `assets/mr-comment-template.md` and produce one comment per reported finding, in the same severity order as the report. Exclude Unverified items and Assumptions.
+2. Fill the fields:
+   - **File**: path relative to the repository root, as shown in the diff.
+   - **Line**: line number in the new version of the file (old version for deleted lines), or a `start-end` range. It must match a line in the diff, otherwise the comment cannot be anchored inline.
+   - **Severity**: the finding's severity.
+   - **Body**: addressed to the author, constructive and neutral in tone. State the problem, the triggering input or state, and the suggested fix. Use a `suggestion` code block only when the fix replaces the commented lines exactly.
+3. Write the body as plain markdown. NEVER wrap it in a blockquote (`>`) or in a code fence, so it pastes cleanly into GitLab/GitHub.
+4. Write the comments in the language of the PR/MR description, unless the user asks for another one.
+5. Output the comments only. NEVER post them through `glab`, `gh`, or any API.
 
 ## Error Handling
 
