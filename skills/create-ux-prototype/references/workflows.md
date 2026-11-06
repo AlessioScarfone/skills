@@ -229,7 +229,7 @@ Present C/R/A. On C, move to Section 6.
 - No frameworks — vanilla JS only
 - Comment every function
 
-**Output format:** Deliver the complete HTML as a single fenced code block. Use [prototype-template.html](prototype-template.html) as the structural base.
+**Output format:** Deliver the complete HTML as a single fenced code block. Use `assets/prototype-template.html` (relative to the skill root) as the structural base.
 
 After the code block, list the key interactions implemented as a bullet list.
 
@@ -368,7 +368,7 @@ Then redisplay the Main Menu.
 
 ## Output Format — UX Specification Document
 
-When generating spec sections, format them as Markdown that can be copied directly into a file. Use [spec-template.md](spec-template.md) as the base structure.
+When generating spec sections, format them as Markdown that can be copied directly into a file. Use `assets/spec-template.md` (relative to the skill root) as the base structure.
 
 Use this frontmatter at the start of the first section (update as sections are completed):
 

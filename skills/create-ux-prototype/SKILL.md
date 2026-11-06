@@ -9,8 +9,8 @@ disable-model-invocation: true
 ## Quick Start
 
 1. Read user request to identify which workflow applies
-2. Load detailed process from [references/workflows.md](references/workflows.md)
-3. Use templates: [references/spec-template.md](references/spec-template.md) | [references/prototype-template.html](references/prototype-template.html)
+2. Read only the section of [references/workflows.md](references/workflows.md) that matches the chosen workflow
+3. Read the templates only when the workflow reaches that output (see "HTML Prototype Rules" and "UX Specification Format")
 4. Follow the C/R/A protocol after every generated section
 
 ## Workflows
@@ -67,11 +67,11 @@ What would you like to do?
 - ARIA labels on interactive elements
 - Vanilla JS only — no frameworks, comment every function
 - Realistic placeholder content — no "Lorem ipsum" for UI labels
--- Use [references/prototype-template.html](references/prototype-template.html) as the structural base
+- Read [assets/prototype-template.html](assets/prototype-template.html) before generating the prototype and use it as the structural base
 
 ## UX Specification Format
 
-Output as Markdown using [references/spec-template.md](references/spec-template.md). Include:
+Read [assets/spec-template.md](assets/spec-template.md) and output as Markdown following it. Include:
 
 - YAML frontmatter (project, date, sections_completed, status)
 - `##` heading per section

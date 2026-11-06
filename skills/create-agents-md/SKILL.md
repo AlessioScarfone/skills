@@ -108,7 +108,7 @@ Analyze and report:
 
 ## Output Format
 
-Check template for AGENTS.md in `references/agents-md-template.md`. Use it as a starting point, filling in project-specific details.
+Read `assets/agents-md-template.md` and use it as a starting point, filling in project-specific details.
 
 ## Quality Checklist
 
