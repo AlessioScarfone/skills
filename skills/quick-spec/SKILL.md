@@ -1,13 +1,13 @@
 ---
 name: quick-spec
-description: Creates or updates a standalone, one-shot feature spec (`<spec-name>.spec.yaml`) with testable requirements, without any project-level context file or hooks. Gathers context from the user prompt, a scoped codebase analysis, and a round-based interview, and embeds it in the spec under a `context` key. Use when the user wants to spec a feature, capture requirements, or draft a spec in a repository that has no spec framework configured. Don't use for generating the implementation plan (use quick-plan), implementing code, or projects already managed with barespec (use spec-create).
+description: Creates or updates a standalone, one-shot feature spec (`<spec-name>.spec.yaml`) with testable requirements. Gathers context from the user prompt, a scoped codebase analysis, and a round-based interview, and embeds it in the spec under a `context` key. Use when the user wants to spec a feature, capture requirements, or draft a spec before implementation. Don't use for generating the implementation plan (use quick-plan) or implementing code.
 argument-hint: <feature description> [output folder]
 disable-model-invocation: true
 ---
 
 # Quick Spec
 
-Produces a single self-contained `<spec-name>.spec.yaml` — the contract between user intent and implementation. All context lives inside the file; no `context.md`, config, or hooks are read.
+Produces a single self-contained `<spec-name>.spec.yaml` — the contract between user intent and implementation. All gathered context lives inside the file.
 
 ## Procedures
 

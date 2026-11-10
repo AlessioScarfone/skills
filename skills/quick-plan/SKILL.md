@@ -1,6 +1,6 @@
 ---
 name: quick-plan
-description: Generates a self-contained implementation plan (`<spec-name>.plan.md`) from a standalone spec created by quick-spec, breaking its requirements into an ordered, testable task checklist that a coding agent can execute directly. Embeds the spec context, execution instructions, requirement-tagged tasks, and verification checkpoints. Use when the user wants to plan a feature from a `*.spec.yaml`, generate implementation tasks, or regenerate a plan after the spec changed. Don't use for writing or changing the spec (use quick-spec), implementing code, or barespec-managed specs (use spec-plan).
+description: Generates a self-contained implementation plan (`<spec-name>.plan.md`) from a standalone spec created by quick-spec, breaking its requirements into an ordered, testable task checklist that a coding agent can execute directly. Embeds the spec context, execution instructions, requirement-tagged tasks, and verification checkpoints. Use when the user wants to plan a feature from a `*.spec.yaml`, generate implementation tasks, or regenerate a plan after the spec changed. Don't use for writing or changing the spec (use quick-spec) or implementing code.
 argument-hint: '[path/to/<spec-name>.spec.yaml]'
 disable-model-invocation: true
 ---
@@ -59,5 +59,5 @@ Turns a `<spec-name>.spec.yaml` into `<spec-name>.plan.md`, written next to the 
 
 - If the given spec path does not exist, list `*.spec.yaml` files in its folder and ask the user to choose.
 - If the spec is not valid YAML or lacks the `feature` key, report the problem and tell the user to fix it with `/quick-spec`.
-- If the spec has no `context` (e.g. a barespec spec), plan from the requirements alone and state in the **Context** section that codebase context is missing.
+- If the spec has no `context`, plan from the requirements alone and state in the **Context** section that codebase context is missing.
 - If a requirement cannot be mapped to any task, stop and report the requirement ID instead of writing an incomplete plan.
