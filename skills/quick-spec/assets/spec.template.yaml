@@ -1,0 +1,84 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# <spec-name>.spec.yaml — standalone, one-shot feature spec.
+# The file MUST begin with the `feature` top-level key, and MAY contain
+# `components` and `constraints` top-level keys. Group keys must be unique across
+# both `components` and `constraints`.
+# ──────────────────────────────────────────────────────────────────────────────
+feature:
+  name: spec-name                       # required; lowercase chars, numbers, dashes, underscores; matches the file prefix
+  description: >-
+    2-3 sentences describing what this feature does, who benefits from it,
+    and why it matters.
+  prerequisites:                        # optional; external dependencies outside this spec
+    - External dependency or "None"
+  created: YYYY-MM-DD
+
+# ──────────────────────────────────────────────────────────────────────────────
+# context — everything an implementer needs to know about the codebase for THIS
+# feature, gathered from the user prompt, the codebase analysis, and the
+# interview. Scoped to the feature, not to the whole project.
+# Omit any sub-key that has no content (e.g. `relevant_code` on a greenfield repo).
+# ──────────────────────────────────────────────────────────────────────────────
+context:
+  summary: >-
+    The problem being solved and why, as stated by the user.
+  stack:                                # languages, frameworks, libraries, test tooling relevant to the feature
+    - e.g. TypeScript 5, Fastify 4, Vitest
+  relevant_code:                        # existing files the feature touches or must follow
+    - path: src/path/to/file.ts
+      role: What this file does and why it matters for the feature.
+  conventions:                          # patterns to follow, each with an example file
+    - Pattern description (see src/path/to/example.ts).
+  commands:                             # verification commands discovered in the repo; omit unknown ones
+    test: npm test
+    build: npm run build
+    lint: npm run lint
+  decisions:                            # interview decisions not already captured in technical_notes
+    - Decision and its rationale.
+
+# ──────────────────────────────────────────────────────────────────────────────
+# components — functional requirements grouped by area.
+# Group keys are UPPER_SNAKE (upper-case chars, numbers, underscores) and unique.
+# Each requirement is an observable, testable (pass/fail) behavior.
+# Reference any requirement by its ACID: <feature-name>.<GROUP_KEY>.<ID>
+# (e.g. spec-name.LOGIN.1-1). The implementation plan tags tasks with these IDs.
+# ──────────────────────────────────────────────────────────────────────────────
+components:
+  COMPONENT_KEY:                        # e.g. LOGIN, EXPORT
+    name: Short human label             # optional
+    description: What this component group covers.   # optional
+    requirements:
+      1: First functional requirement (observable, testable behavior).
+      2: Second functional requirement.
+      2-1: Sub-requirement of 2 (max 1 level deep; never use `-0`).
+      2-note: Optional inline note attached to requirement 2.
+
+# ──────────────────────────────────────────────────────────────────────────────
+# constraints — cross-cutting / non-functional requirements (performance,
+# security, data privacy, accessibility). Same shape as components.
+# Omit this whole section if there are none.
+# ──────────────────────────────────────────────────────────────────────────────
+constraints:
+  CONSTRAINT_KEY:                       # e.g. AUTH, PERF
+    name: Short human label             # optional
+    description: Additional engineering constraints. # optional
+    requirements:
+      1: Cross-cutting requirement (observable, testable behavior).
+
+# Scope exclusions settled during the interview.
+non_goals:
+  - What is explicitly out of scope for this spec.
+
+# Technical choices and their rationale, as settled during the interview.
+technical_notes: >-
+  Implementation hints, architectural considerations, database schemas,
+  API details, or technical constraints.
+
+# EXCEPTION — deferred external blockers only. Normally absent: omit it entirely.
+# Add an entry only when the answer depends on a party or fact outside the session
+# AND the user explicitly confirmed the deferral.
+open_questions:
+  - question: What is still undecided.
+    blocked_by: The external party, event, or fact the answer depends on.
+    affects: <ACID or "general">
+    deferred_on: YYYY-MM-DD

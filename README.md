@@ -14,6 +14,7 @@ Skills for AI-assisted - [Agent Skills Documentation](https://agentskills.io)
 | `pr-description`| Generate pull/merge request titles and descriptions from diffs and context. Use when creating a PR, writing PR description, drafting merge request, or summarizing changes for review. |
 | `skill-validator` | Validates an existing agent skill against the agentskills.io specification. Audits SKILL.md structure, metadata, file hierarchy, instruction tone, and checklist compliance, producing a pass/fail report with remediation steps. |
 | `show-me` | Helps the user understand the current topic visually with concise diagrams, code-shape sketches, and focused HTML artifacts. |
+| `quick-spec` | Creates a standalone, one-shot feature spec (`<spec-name>.spec.yaml`) through codebase analysis and a round-based interview, embedding the gathered context in the spec itself — no project context file or hooks required. |
 
 
 ## Other skills
