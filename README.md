@@ -13,6 +13,7 @@ Skills for AI-assisted - [Agent Skills Documentation](https://agentskills.io)
 | `skill-creator` | Authors and structures professional-grade agent skills following the agentskills.io spec. Use when creating new skill directories, drafting procedural instructions, or optimizing metadata for discoverability. Don't use for general documentation, non-agentic library code, or README files. |
 | `pr-description`| Generate pull/merge request titles and descriptions from diffs and context. Use when creating a PR, writing PR description, drafting merge request, or summarizing changes for review. |
 | `skill-validator` | Validates an existing agent skill against the agentskills.io specification. Audits SKILL.md structure, metadata, file hierarchy, instruction tone, and checklist compliance, producing a pass/fail report with remediation steps. |
+| `show-me` | Helps the user understand the current topic visually with concise diagrams, code-shape sketches, and focused HTML artifacts. |
 
 
 ## Other skills
