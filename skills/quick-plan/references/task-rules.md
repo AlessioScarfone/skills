@@ -6,7 +6,7 @@
 
 Do not write code during planning. The output is a plan document, not an implementation.
 
-- Read the spec, including its `context`.
+- Read the contract (the spec file, or the plan's inline `requirements` block), including its context.
 - Open the files listed in `context.relevant_code` when a task needs a precise location or pattern.
 - Map dependencies between components and note risks.
 
@@ -67,8 +67,8 @@ Each vertical slice delivers working, testable functionality.
 
 ### Requirement references
 - Tag every task with the requirement ID(s) it satisfies: `_(LOGIN.1)_` or `_(LOGIN.1, AUTH.2)_`.
-- The ID is `<GROUP_KEY>.<requirement-id>` as defined in the spec (full ACID: `<spec-name>.<GROUP_KEY>.<ID>`).
-- Every requirement under `components` and `constraints` must be covered by at least one task.
+- The ID is `<GROUP_KEY>.<requirement-id>` as defined in the spec (full ACID: `<spec-name>.<GROUP_KEY>.<ID>`) or in the inline `requirements` block.
+- Every requirement under `components` and `constraints` (or every inline group) must be covered by at least one task.
 
 ## Task Content
 
