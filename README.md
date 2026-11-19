@@ -9,14 +9,14 @@ Skills for AI-assisted - [Agent Skills Documentation](https://agentskills.io)
 |-------|-------------|
 | `code-review` | Reviews local changes or diffs for bugs, security vulnerabilities, and code quality issues, reporting only verified, high-impact findings with confidence scoring. |
 | `create-agents-md` | Generate an AGENTS.md file for a repository |
-| `create-ux-prototype` | Facilitate UX design sessions with structured brainstorming, design decision workshops, UX specification writing, and standalone HTML/CSS prototyping |
 | `skill-creator` | Authors and structures professional-grade agent skills following the agentskills.io spec. Use when creating new skill directories, drafting procedural instructions, or optimizing metadata for discoverability. Don't use for general documentation, non-agentic library code, or README files. |
-| `pr-description`| Generate pull/merge request titles and descriptions from diffs and context. Use when creating a PR, writing PR description, drafting merge request, or summarizing changes for review. |
 | `skill-validator` | Validates an existing agent skill against the agentskills.io specification. Audits SKILL.md structure, metadata, file hierarchy, instruction tone, and checklist compliance, producing a pass/fail report with remediation steps. |
 | `show-me` | Helps the user understand the current topic visually with concise diagrams, code-shape sketches, and focused HTML artifacts. |
 | `quick-spec` | Creates a standalone, one-shot feature spec (`<spec-name>.spec.yaml`) through codebase analysis and a round-based interview, embedding the gathered context in the spec itself. |
-| `git-commit-authors-rewrite` | Audits which author and committer identities appear in a git repository's commits and rewrites them to a chosen identity across all branches, with a mirror backup, repo-local git config and a confirmed force-push. <br/><br/> ⚠️ **Danger:** rewrites git history (all commit hashes change) and needs a force-push; without an old email it also rewrites other people's commits. **Use only on repos you own and pass the old email to change only your own commits.**|
 | `quick-plan` | Generates a self-contained, requirement-tagged implementation plan (`<name>.plan.md`) from a `quick-spec` spec or, without a spec, with the requirements defined inline in the plan itself, ready to hand to a coding agent. |
+| `pr-description`| Generate pull/merge request titles and descriptions from diffs and context. Use when creating a PR, writing PR description, drafting merge request, or summarizing changes for review. |
+| `create-ux-prototype` | Facilitate UX design sessions with structured brainstorming, design decision workshops, UX specification writing, and standalone HTML/CSS prototyping |
+| `git-commit-authors-rewrite` | Audits which author and committer identities appear in a git repository's commits and rewrites them to a chosen identity across all branches, with a mirror backup, repo-local git config and a confirmed force-push. <br/><br/> ⚠️ **Danger:** rewrites git history (all commit hashes change) and needs a force-push; without an old email it also rewrites other people's commits. **Use only on repos you own and pass the old email to change only your own commits.**|
 
 
 ## Other skills
